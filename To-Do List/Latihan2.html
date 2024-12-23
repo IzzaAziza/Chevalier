@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F6F5F2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #F0EBE3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #E195AB;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .namaTugas, .deskripsi, .deadline {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .namaTugas p, .deskripsi p, .deadline p {
+            margin-bottom: 5px;
+            color: #31363F;
+        }
+
+        input, textarea, input[type="date"] {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input[type="tugas"]:focus, textarea:focus, input[type="date"]:focus {
+            border-color: #F98E90;
+            box-shadow: 0 0 5px #FF748B(102, 175, 233, 0.5);
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #FF8383;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:active {
+            background-color: #F98E90;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form action="">
+            <div class="namaTugas">
+                <p>Nama Tugas</p>
+                <input type="tugas" placeholder="Masukkan nama tugas">
+            </div>
+            <div class="deskripsi">
+                <p>Deskripsi Tugas</p>
+                <textarea name="text" placeholder="Masukkan deskripsi tugas"></textarea>
+            </div>
+            <div class="deadline">
+                <p>Deadline Tugas</p>
+                <input type="date">
+            </div>
+            <button>Tambahkan</button>
+        </form>
+    </div>
+</body>
+
+</html>
